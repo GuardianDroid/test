@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0ba30d6a-2fb0-4814-94b9-83a8ab82abc1",
+		"_postman_id": "aa6ba67a-f323-45a6-b50a-6bf07db7c75b",
 		"name": "AOSCX-VLAN-Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -15,17 +15,17 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://10.251.1.101/rest/v10.04/login?username=admin&password=aruba123",
+					"raw": "https://10.251.13.103/rest/v10.10/login?username=admin&password=aruba123",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
-						"101"
+						"13",
+						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"login"
 					],
 					"query": [
@@ -52,17 +52,17 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://10.251.1.101/rest/v10.04/system/vlans",
+					"raw": "https://10.251.13.103/rest/v10.10/system/vlans",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
-						"101"
+						"13",
+						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"system",
 						"vlans"
 					]
@@ -80,17 +80,17 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://10.251.1.101/rest/v10.04/system/vlans/101",
+					"raw": "https://10.251.13.103/rest/v10.10/system/vlans/101",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
-						"101"
+						"13",
+						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"system",
 						"vlans",
 						"101"
@@ -116,17 +116,17 @@
 					"raw": "{\n\"id\": 101,\n\"name\": \"Voice VLAN\"\n}\n"
 				},
 				"url": {
-					"raw": "https://10.251.1.101/rest/v10.04/system/vlans",
+					"raw": "https://10.251.13.103/rest/v10.10/system/vlans",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
-						"101"
+						"13",
+						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"system",
 						"vlans"
 					]
@@ -144,17 +144,17 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://10.251.1.101/rest/v10.04/system/vlans",
+					"raw": "https://10.251.13.103/rest/v10.10/system/vlans",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
-						"101"
+						"13",
+						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"system",
 						"vlans"
 					]
@@ -172,17 +172,17 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://10.251.1.101/rest/v10.04/logout",
+					"raw": "https://10.251.13.103/rest/v10.10/logout",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
-						"101"
+						"13",
+						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"logout"
 					]
 				}

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0ba30d6a-2fb0-4814-94b9-83a8ab82abc1",
+		"_postman_id": "cc26ac28-dd38-4576-8696-74572f3c3205",
 		"name": "AOSCX-VLAN-Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -15,17 +15,17 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://10.251.1.103/rest/v10.04/login?username=admin&password=aruba123",
+					"raw": "https://10.251.13.103/rest/v10.10/login?username=admin&password=aruba123",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
+						"13",
 						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"login"
 					],
 					"query": [
@@ -52,17 +52,17 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://10.251.1.101/rest/v10.04/system/vlans",
+					"raw": "https://10.251.13.103/rest/v10.10/system/vlans",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
-						"101"
+						"13",
+						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"system",
 						"vlans"
 					]
@@ -80,90 +80,20 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://10.251.1.101/rest/v10.04/system/vlans/101",
+					"raw": "https://10.251.13.103/rest/v10.10/system/vlans/101",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
-						"101"
+						"13",
+						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"system",
 						"vlans",
 						"101"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "vlanX5 create",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\"id\": 15,\n\"name\": \"AP1 VLAN\"\n}\n"
-				},
-				"url": {
-					"raw": "https://10.251.1.103/rest/v10.04/system/vlans",
-					"protocol": "https",
-					"host": [
-						"10",
-						"251",
-						"1",
-						"103"
-					],
-					"path": [
-						"rest",
-						"v10.04",
-						"system",
-						"vlans"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "vlanX6 create",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\"id\": 15,\n\"name\": \"AP1 VLAN\"\n}\n"
-				},
-				"url": {
-					"raw": "https://10.251.1.103/rest/v10.04/system/vlans",
-					"protocol": "https",
-					"host": [
-						"10",
-						"251",
-						"1",
-						"103"
-					],
-					"path": [
-						"rest",
-						"v10.04",
-						"system",
-						"vlans"
 					]
 				}
 			},
@@ -179,17 +109,17 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://10.251.1.103/rest/v10.04/system/vlans",
+					"raw": "https://10.251.13.103/rest/v10.10/system/vlans",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
+						"13",
 						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"system",
 						"vlans"
 					]
@@ -198,12 +128,9 @@
 			"response": []
 		},
 		{
-			"name": "check vlan_mode and vlan_tag for 1/1/11",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "create vlan 101",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
@@ -214,32 +141,34 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\r\n\"id\": 101,\r\n\"name\": \"Voice VLAN\"\r\n}\r\n"
 				},
 				"url": {
-					"raw": "https://10.251.1.103/rest/v10.04/system/interfaces/1%2F1%2F11",
+					"raw": "https://10.251.13.103/rest/v10.10/system/vlans",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
+						"13",
 						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"system",
-						"interfaces",
-						"1%2F1%2F11"
+						"vlans"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "disable routing on interface 1/1/11(Optional for 6X00)",
+			"name": "check vlan_mode and vlan_tag for 1/1/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "PUT",
+				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
@@ -250,20 +179,20 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"routing\": false\n}"
+					"raw": ""
 				},
 				"url": {
-					"raw": "https://10.251.1.101/rest/v10.04/system/interfaces/1%2F1%2F1",
+					"raw": "https://10.251.13.103/rest/v10.10/system/interfaces/1%2F1%2F1",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
-						"101"
+						"13",
+						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"system",
 						"interfaces",
 						"1%2F1%2F1"
@@ -273,7 +202,7 @@
 			"response": []
 		},
 		{
-			"name": "disable routing on interface1/1/12(Optional for 6X00)",
+			"name": "disable routing on interface 1/1/1(Optional for 6X00)",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -289,17 +218,53 @@
 					"raw": "{\n    \"routing\": false\n}"
 				},
 				"url": {
-					"raw": "https://10.251.1.101/rest/v10.04/system/interfaces/1%2F1%2F1",
+					"raw": "https://10.251.13.103/rest/v10.10/system/interfaces/1%2F1%2F1",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
-						"101"
+						"13",
+						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
+						"system",
+						"interfaces",
+						"1%2F1%2F1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "map interface 1/1/1 to vlan 101",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"routing\": false,\n    \"vlan_mode\": \"access\",\n    \"vlan_tag\": {\n        \"101\": \"/rest/v10.10/system/vlans/101\"\n}\n}"
+				},
+				"url": {
+					"raw": "https://10.251.13.103/rest/v10.10/system/interfaces/1%2F1%2F1",
+					"protocol": "https",
+					"host": [
+						"10",
+						"251",
+						"13",
+						"103"
+					],
+					"path": [
+						"rest",
+						"v10.10",
 						"system",
 						"interfaces",
 						"1%2F1%2F1"
@@ -328,92 +293,20 @@
 					"raw": "{\n    \"routing\": false,\n    \"vlan_mode\": \"access\",\n    \"vlan_tag\": {\n        \"101\": \"/rest/v10.04/system/vlans/101\"\n}\n}"
 				},
 				"url": {
-					"raw": "https://10.251.1.101/rest/v10.04/system/interfaces/1%2F1%2F1",
+					"raw": "https://10.251.13.103/rest/v10.10/system/interfaces/1%2F1%2F1",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
-						"101"
-					],
-					"path": [
-						"rest",
-						"v10.04",
-						"system",
-						"interfaces",
-						"1%2F1%2F1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "map interface 1/1/11 to vlan X5",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"routing\": false,\n    \"vlan_mode\": \"access\",\n    \"vlan_tag\": {\n        \"101\": \"/rest/v10.04/system/vlans/101\"\n}\n}"
-				},
-				"url": {
-					"raw": "https://10.251.1.101/rest/v10.04/system/interfaces/1%2F1%2F1",
-					"protocol": "https",
-					"host": [
-						"10",
-						"251",
-						"1",
-						"101"
-					],
-					"path": [
-						"rest",
-						"v10.04",
-						"system",
-						"interfaces",
-						"1%2F1%2F1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "map interface 1/1/12 to vlan X6",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"routing\": false,\n    \"vlan_mode\": \"access\",\n    \"vlan_tag\": {\n        \"16\": \"/rest/v10.04/system/vlans/16\"\n}\n}"
-				},
-				"url": {
-					"raw": "https://10.251.1.103/rest/v10.04/system/interfaces/1%2F1%2F12",
-					"protocol": "https",
-					"host": [
-						"10",
-						"251",
-						"1",
+						"13",
 						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"system",
 						"interfaces",
-						"1%2F1%2F12"
+						"1%2F1%2F1"
 					]
 				}
 			},
@@ -429,17 +322,17 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://10.251.1.101/rest/v10.04/logout",
+					"raw": "https://10.251.13.103/rest/v10.10/logout",
 					"protocol": "https",
 					"host": [
 						"10",
 						"251",
-						"1",
-						"101"
+						"13",
+						"103"
 					],
 					"path": [
 						"rest",
-						"v10.04",
+						"v10.10",
 						"logout"
 					]
 				}
